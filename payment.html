@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Passport Services</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            padding-top: 60px; /* Add some padding for the fixed navbar */
+        }
+        footer {
+            background-color: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .payment-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 20px auto; /* Center the container */
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .payment-container h1 {
+            margin-bottom: 20px;
+            color: #0073e6;
+        }
+        .fee-table {
+            width: 45%;
+            border-collapse: collapse;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        .fee-table th,
+        .fee-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .fee-table th {
+            background-color: #f2f2f2;
+        }
+        .payment-options {
+            width: 45%;
+            margin-top: 20px;
+            flex-grow: 1;
+        }
+        .payment-options p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .payment-options label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .payment-options input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .payment-options input[type="submit"] {
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .payment-options input[type="submit"]:hover {
+            background-color: #0059b3;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Passport Services Portal</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="newpassport.html">Apply for New Passport</a></li>
+                    <li class="nav-item"><a class="nav-link" href="renew.html">Renew Passport</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback/Complaint</a></li>
+                    <li class="nav-item"><a class="nav-link" href="history.html">Application History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="payment.html">Payment</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="payment-container">
+        <table class="fee-table">
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Service Required</th>
+                    <th>Application Fee</th>
+                    <th>Additional Tatkaal Fee</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Fresh Passport/Re-issue of Passport including additional booklet due to exhaustion of visa pages (36 pages) of 10 years validity.</td>
+                    <td>Rs.1,500/-*</td>
+                    <td>Rs.2,000/-*</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Fresh Passport/Re-issue of Passport including additional booklet due to exhaustion of visa pages (60 pages) of 10 years validity.</td>
+                    <td>Rs.2,000/-</td>
+                    <td>Rs.2,000/-</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Fresh Passport/Re-issue of Passport for Minors (below 18 years of Age), of 5 years validity or till the minor attains the age of 18 whichever is earlier (36 pages)</td>
+                    <td>Rs.1,000/-</td>
+                    <td>Rs.2,000/-</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Replacement of Passport (36 pages) in lieu of lost, damaged or stolen passport</td>
+                    <td>Rs.3,000/-</td>
+                    <td>Rs.2,000/-</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Replacement of Passport (60 pages) in lieu of lost, damaged or stolen passport</td>
+                    <td>Rs.3,500/-</td>
+                    <td>Rs.2,000/-</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Police Clearance Certificate (PCC)</td>
+                    <td>Rs.500/-</td>
+                    <td>NA</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Replacement of Passport (36 pages) for deletion of ECR / Change in personal particulars (10 year validity)</td>
+                    <td>Rs.1,500/-</td>
+                    <td>Rs.2,000/-</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Replacement of Passport (60 pages) for deletion of ECR / Change in personal particulars (10 year validity)</td>
+                    <td>Rs.2,000/-</td>
+                    <td>Rs.2,000/-</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Replacement of Passport (36 pages) for deletion of ECR/ Change in personal particulars for Minors (below 18 years of Age), of 5 years validity or till the minor attains the age of 18 whichever is earlier.</td>
+                    <td>Rs.1,000/-</td>
+                    <td>Rs.2,000/-</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="payment-options">
+            <h1>Payment Options</h1>
+            <p>Please enter your payment details below:</p>
+            <form action="payment_process.php" method="post">
+                <div class="form-group">
+                    <label for="card_number">Card Number:</label>
+                    <input type="text" class="form-control" id="card_number" name="card_number" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiry_date">Expiry Date:</label>
+                    <input type="text" class="form-control" id="expiry_date" name="expiry_date" placeholder="MM/YYYY" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" class="form-control" id="cvv" name="cvv" maxlength="3" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Pay Now</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

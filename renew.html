@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport Renewal Application Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #004080;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #0059b3;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Passport Services Portal</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Passport Services Portal</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="newpassport.html">Apply for New Passport</a></li>
+                    <li class="nav-item"><a class="nav-link" href="renew.html">Renew Passport</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback/Complaint</a></li>
+                    <li class="nav-item"><a class="nav-link" href="history.html">Application History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="payment.html">Payment</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1>Passport Renewal Application Form</h1>
+    <form action="/submit_passport_renewal" method="POST">
+        <!-- Section 1: Passport Renewal Information -->
+        <fieldset>
+            <legend>1. Passport Renewal Information</legend>
+            <label for="renewal_reason">Reason for Renewal:</label>
+            <select id="renewal_reason" name="renewal_reason" class="form-control" required>
+                <option value="validity_expired">Validity Expired</option>
+                <option value="validity_expiring_soon">Validity Expiring Soon</option>
+                <option value="lost_passport">Lost Passport</option>
+                <option value="damaged_passport">Damaged Passport</option>
+                <option value="change_of_personal_details">Change of Personal Details</option>
+            </select>
+            <label for="application_type">Type of Application:</label>
+            <select id="application_type" name="application_type" class="form-control" required>
+                <option value="normal">Normal</option>
+                <option value="tatkaal">Tatkaal</option>
+            </select>
+            <label for="passport_booklet">Type of Passport Booklet:</label>
+            <select id="passport_booklet" name="passport_booklet" class="form-control" required>
+                <option value="36_pages">36 Pages</option>
+                <option value="60_pages">60 Pages</option>
+            </select>
+        </fieldset>
+
+        <!-- Section 2: Applicant's Personal Details -->
+        <fieldset>
+            <legend>2. Applicant's Personal Details</legend>
+            <label for="current_passport_number">Current Passport Number:</label>
+            <input type="text" id="current_passport_number" name="current_passport_number" class="form-control" required>
+
+            <label for="issue_date">Date of Issue (DD-MM-YYYY):</label>
+            <input type="date" id="issue_date" name="issue_date" class="form-control" required>
+
+            <label for="expiry_date">Date of Expiry (DD-MM-YYYY):</label>
+            <input type="date" id="expiry_date" name="expiry_date" class="form-control" required>
+
+            <label for="place_of_issue">Place of Issue:</label>
+            <input type="text" id="place_of_issue" name="place_of_issue" class="form-control" required>
+
+            <label for="given_name">Given Name:</label>
+            <input type="text" id="given_name" name="given_name" class="form-control" required>
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" class="form-control" required>
+
+            <label for="dob">Date of Birth (DD-MM-YYYY):</label>
+            <input type="date" id="dob" name="dob" class="form-control" required>
+
+            <label for="place_of_birth">Place of Birth:</label>
+            <input type="text" id="place_of_birth" name="place_of_birth" class="form-control" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" class="form-control" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="transgender">Transgender</option>
+            </select>
+        </fieldset>
+
+        <!-- Section 3: Contact Details -->
+        <fieldset>
+            <legend>3. Contact Details</legend>
+            <label for="present_address">Present Residential Address:</label>
+            <input type="text" id="present_address" name="present_address" class="form-control" required>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" class="form-control" required>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" class="form-control" required>
+
+            <label for="pin">PIN:</label>
+            <input type="text" id="pin" name="pin" class="form-control" required>
+
+            <label for="email">E-mail ID:</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+
+            <label for="mobile_number">Mobile Number:</label>
+            <input type="text" id="mobile_number" name="mobile_number" class="form-control" required>
+        </fieldset>
+
+        <!-- Section 4: Emergency Contact Details -->
+        <fieldset>
+            <legend>4. Emergency Contact Details</legend>
+            <label for="emergency_contact_name">Emergency Contact Name:</label>
+            <input type="text" id="emergency_contact_name" name="emergency_contact_name" class="form-control" required>
+
+            <label for="emergency_contact_address">Emergency Contact Address:</label>
+            <input type="text" id="emergency_contact_address" name="emergency_contact_address" class="form-control" required>
+
+            <label for="emergency_contact_mobile">Emergency Contact Mobile Number:</label>
+            <input type="text" id="emergency_contact_mobile" name="emergency_contact_mobile" class="form-control" required>
+
+            <label for="emergency_contact_email">Emergency Contact E-mail:</label>
+            <input type="email" id="emergency_contact_email" name="emergency_contact_email" class="form-control">
+        </fieldset>
+
+        <!-- Section 5: Declaration -->
+        <fieldset>
+            <legend>5. Declaration</legend>
+            <p>I hereby declare that the information provided in this application is true to the best of my knowledge and belief. I understand that providing false information is a criminal offense and may result in prosecution.</p>
+            <label for="declaration_name">Name:</label>
+            <input type="text" id="declaration_name" name="declaration_name" class="form-control" required>
+
+            <label for="declaration_place">Place:</label>
+            <input type="text" id="declaration_place" name="declaration_place" class="form-control" required>
+
+            <label for="declaration_date">Date:</label>
+            <input type="date" id="declaration_date" name="declaration_date" class="form-control" required>
+        </fieldset>
+
+        <!-- Section 6: Additional Information -->
+        <fieldset>
+            <legend>6. Additional Information</legend>
+            <div class="form-group">
+                <label for="criminal_record">Are there any criminal proceedings pending against you?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="criminal_record" id="criminal_record_yes" value="yes">
+                    <label class="form-check-label" for="criminal_record_yes">
+                        Yes
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="criminal_record" id="criminal_record_no" value="no" checked>
+                    <label class="form-check-label" for="criminal_record_no">
+                        No
+                    </label>
+                </div>
+            </div>
+
+            <!-- Add similar structures for the remaining questions -->
+
+        </fieldset>
+
+        <!-- Section 7: Declaration -->
+        <fieldset>
+            <legend>7. Declaration</legend>
+            <div class="form-group">
+                <p class="mb-3">I owe allegiance to the sovereignty, unity, and integrity of India, and have not voluntarily acquired the citizenship or travel document of another country. I have not lost, surrendered, or been deprived of my citizenship of India. The information given by me in this form and enclosures is true, and I am solely responsible for its accuracy.</p>
+                <label for="declaration_name">Name of Applicant:</label>
+                <input type="text" id="declaration_name" name="declaration_name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="declaration_place">Place:</label>
+                <input type="text" id="declaration_place" name="declaration_place" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="declaration_date">Date:</label>
+                <input type="date" id="declaration_date" name="declaration_date" class="form-control" required>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
